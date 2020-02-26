@@ -19,14 +19,15 @@ if(isset($_POST['search'])){
         $list = $data['records'];
     }
 ?>
+<div class="empty-div-sm"></div>
+<div class="row center">
+        <h1> Product List </h1>
+</div>
+<div class="empty-div-sm"></div>
 <div class="div-header -stretch">
     
     <a href="index.php?module=addProduct"><div class="btn -primary -solid">ADD PRODUCT</div></a>
     <div class="empty-div-sm"></div>
-    
-    <div>
-        <h1> Products </h1>
-    </div>
     
     <div class="quick_actions row t-data -title-2">
         <div class="search_bar-cntr">
@@ -38,12 +39,13 @@ if(isset($_POST['search'])){
         
     </div>
 </div>
+<div class="empty-div-sm"></div>
 <table>
     <tr>
         <th><h3>Name</h3></th>
         <th><h3>Description</h3></th>
         <th><h3>Price</h3></th>
-        <th><h3>Category Name</h3></th>
+        <th><h3>Category</h3></th>
     </tr>
 <?php
 foreach($list as $value){
