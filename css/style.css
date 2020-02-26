@@ -1,0 +1,280 @@
+
+a{
+    text-decoration: none;
+    color: #000;
+}
+li{
+    list-style: none;
+}
+.space-between{
+    justify-content: space-between;
+}/*--*/
+.row, .col{
+    display: flex;
+}/*--*/
+.row{
+    flex-direction: row;
+    
+}/*--*/
+.col{
+    flex-direction: column;
+}/*--*/
+.y-center.row{
+    align-items: center;
+}/*--*/
+
+.center{
+    justify-content: center;
+    align-items: center;
+}/*--*/
+
+.-stretch {
+    width: 100%;
+}
+.space{
+   justify-content: ; 
+}
+/*--*/
+.empty-div-sm{
+    height: 5vh;
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Avenir Next', 'Lato', sans-serif;
+    font-size: 16px;
+    background-color: whitesmoke;
+  }
+  
+  .t-data {
+    font-family: 'Avenir Next';
+  }
+  
+  .t-data.-metadata-1 {
+    font-weight: 500;
+    font-size: 14px;
+  }
+  
+  .t-data.-metadata-2 {
+    font-weight: 500;
+    font-size: 12px;
+  }
+  
+  .t-data.-heading-1 {
+    font-weight: 600;
+    font-size: 48px;
+  }
+  
+  .t-data.-heading-2 {
+    font-weight: 600;
+    font-size: 40px;
+  }
+  
+  .t-data.-heading-3 {
+    font-weight: 600;
+    font-size: 32px;
+  }
+  
+  .t-data.-heading-4 {
+    font-weight: 600;
+    font-size: 26px;
+  }
+  
+  .t-data.-heading-4 {
+    font-weight: 600;
+    font-size: 20px;
+  }
+  
+  .t-data.-title-1 {
+    font-size: 18px;
+  }
+  
+  .t-data.-title-2 {
+    font-size: 14px;
+  }
+  
+  .t-data.-content-regular {
+    font-size: 18px;
+  }
+  
+  .t-data.-content-small {
+    font-size: 16px;
+  }
+  
+  .t-data.-label {
+    font-style: 500;
+    font-size: 12px;
+  }
+  
+  .t-accent-data {
+    font-family: 'Noto Serif', serif;
+    font-size: 18px;
+  }
+  
+  .t-accent {
+    font-family: 'Avenir Next', sans-serif;
+  }/*--*/
+  
+  .t-accent.-title-1 {
+    font-weight: 600;
+    font-size: 32px;
+  }/*--*/
+  
+  .t-accent.-title-2 {
+    font-weight: 600;
+    font-size: 24px;
+  }/*--*/
+  
+  .t-accent.-title-3 {
+    font-weight: 600;
+    font-size: 18px;
+  }
+  
+  .t-accent.-heading-1 {
+    font-size: 28px;
+  }
+  
+  .t-accent.-heading-2 {
+    font-size: 22px;
+  }
+  
+  .t-accent.-heading-2 {
+    font-size: 18px;
+  }
+  
+  .btn {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .btn.-primary.-solid {
+    background-color: grey;
+    color: #FFF;
+    padding: 10px;
+  }
+
+  
+  nav {
+    background-color: rgb(13, 37, 44);
+    padding: 18px 0;
+  }
+  
+  .nav-wrap {
+    background-color:  rgb(13, 37, 44);
+    max-width: 1100px;
+    color: whitesmoke;
+  }/*--*/
+  
+  .menu-item, .quick_actions > div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }/*--*/
+  
+  .divider {
+    margin: 0 2rem;
+    width: 1px;
+    height: 1rem;
+    background-color: #5A6B88;
+  }
+  
+  .menu-item {
+    margin-right: 1rem;
+  }/*--*/
+  
+  .menu-item:last-child {
+    margin-right: 0;
+  }/*--*/
+  
+  .quick_actions > div {
+    margin-right: .5rem;
+  }
+  
+  .quick_actions > div:last-child {
+    margin-right: 0;
+  }
+  
+  .search_bar-cntr {
+    position: relative;
+  }
+  
+  
+  .search-icon:hover {
+    color: #D7DCE4;
+  }
+  
+  .search_bar {
+    border-radius: 5px;
+    border: 1px solid black;
+    /*background-color: #5A6B88;*/
+    color: #000;
+    padding: .5rem 1rem;
+    padding-right: 2rem;
+  }
+  
+  .search_bar::-webkit-input-placeholder {
+    color: #000;
+    font-size: 14px;
+  }
+  
+  .search_bar:-ms-input-placeholder {
+    color: #000;
+    font-size: 14px;
+  }
+  
+  .search_bar::placeholder {
+    color: #000;
+    font-size: 14px;
+  }
+  .container-fluid{
+      padding-right:15px;
+      padding-left:15px;
+      margin-right:auto;
+      margin-left:auto;
+      min-height: 90vh;
+      /*background-color: grey;*/
+}
+    .menu-item a{
+        text-decoration: none;
+        color: whitesmoke;
+    }
+
+    .footer{
+        height: 10vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgb(13, 37, 44);
+        color: whitesmoke;
+
+    }
+    content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding-bottom: 50px;
+    }
+th, td{
+        border-bottom: 1px solid black;
+        padding: 5px 5px 5px 5px;
+    }
+th a, td a{
+        text-decoration: none;
+        color: black;
+}
+.div-header{
+    border: 0px solid black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between   ;
+    align-items: center;
+    max-width: 900px;
+}
+
+
