@@ -16,7 +16,7 @@ $list = $data['records'];
 <input type="text" name="description" placeholder="description" required><br><br>
 <div class="empty-small"></div>
 <div class="empty-small"></div>
-<input type="text" name="price" placeholder="price" required><br><br>
+<input type="number" name="price" placeholder="price" required><br><br>
 <div class="empty-small"></div>
 <div class="empty-small"></div>
 <select name="category" required>
