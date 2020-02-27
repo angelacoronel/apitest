@@ -54,7 +54,7 @@ foreach($list as $value){
         <td><b><a href="index.php?module=productDetails&id=<?php echo $value['id'];?>"><?php echo $value['name'];?></a></b></td>
         <td><?php echo $value['description'];?></td>
         <td><?php echo $value['price'];?></td>
-        <td><?php echo $value['category_name'];?></td>
+        <td><a href="index.php?module=productDetails&id=<?php echo $value['id'];?>"><?php echo $value['category_name'];?></a></td>
     </tr>
  
 <?php
