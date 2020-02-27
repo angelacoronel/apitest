@@ -309,7 +309,7 @@ body {
 }
 
 #content-admin-wrap {
-  width: fit-content;
+  width: 100vw;
   max-width: 60vw;
   height: fit-content;
   border: 0px solid red;
