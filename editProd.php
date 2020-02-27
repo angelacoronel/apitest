@@ -24,7 +24,7 @@ Name: <input type="text" name="name" value="<?php echo $list['name'];?>" require
 Description:<input type="text" name="description" value="<?php echo $list['description'];?>" required><br><br>
 <div class="empty-small"></div>
 <div class="empty-small"></div>
-Price:<input type="text" name="price" value="<?php echo $list['price'];?>" required><br><br>
+Price:<input type="number" name="price" value="<?php echo $list['price'];?>" required><br><br>
 <div class="empty-small"></div>
 <div class="empty-small"></div>
 Category:<select name="category" required>
