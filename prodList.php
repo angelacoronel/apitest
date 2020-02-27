@@ -5,7 +5,12 @@ $data = json_decode($json,true);
 //rsort($data);
 $list = $data['records'];
 //rsort($list, function($a,$b){return $a->id > $b->id;});
-//print_r($list);   
+//print_r($list); 
+$limit = 8; // five rows per page
+$offset = ($page - 1) * $limit; // offset
+$total_items = count($list); // total items
+$total_pages = ceil($total_items / $limit);
+$final = array_splice($list, $offset, $limit); // splice them according to offset and limit
 ?>           
 <div class="empty-small"></div>
 			<form method="POST" action="index.php?module=prod">
@@ -33,6 +38,9 @@ if(isset($_POST['search'])){
         $list = $data['records'];
     }
 ?>
+<?php for($x = 1; $x <= $total_pages; $x++): ?>
+    <a href='index.php?module=prod&page=<?php echo $x; ?>'><?php echo $x; ?></a>
+<?php endfor; ?>
 <table border="1px">
     <tr class="head">
         <th>Name</th>
@@ -40,7 +48,7 @@ if(isset($_POST['search'])){
         <th>Category</th>
     </tr>
     <?php
-foreach($list as $value){
+foreach($final as $value){
     
     ?>
     <tr>
