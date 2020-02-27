@@ -6,7 +6,7 @@ $data = json_decode($json,true);
 $list = $data['records'];
 //rsort($list, function($a,$b){return $a->id > $b->id;});
 //print_r($list); 
-$limit = 8; // five rows per page
+$limit = 10; // five rows per page
 $offset = ($page - 1) * $limit; // offset
 $total_items = count($list); // total items
 $total_pages = ceil($total_items / $limit);
