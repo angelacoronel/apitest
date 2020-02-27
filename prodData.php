@@ -30,7 +30,7 @@ $list = $details['records'];
 <div class="empty-small"></div>
 <div class="empty-small"></div>
 <div class="empty-small"></div>
-<div>
+<div class="gallery-desc">
     <h2>Category:</h2> <?php echo $list['category_name'];?>
 </div><br><br>
 <div class="empty-view"></div>
