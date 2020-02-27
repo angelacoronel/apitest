@@ -10,7 +10,7 @@ $list = $data['records'];
 <div class="empty-small"></div>
 <div class="empty-small"></div>
 <form action="addProd_pro.php" method="POST">
-<input type="text" name="name" placeholder="name" required><br><br>
+<input type="text" name="name" placeholder="name"><br><br>
 <div class="empty-small"></div>
 <div class="empty-small"></div>
 <input type="text" name="description" placeholder="description" required><br><br>
