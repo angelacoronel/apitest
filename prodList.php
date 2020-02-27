@@ -38,7 +38,7 @@ if(isset($_POST['search'])){
         $list = $data['records'];
     }
 ?>
-<?php for($x = 1; $x <= $total_pages; $x++): ?>
+Page:<?php for($x = 1; $x <= $total_pages; $x++): ?>
     <a href='index.php?module=prod&page=<?php echo $x; ?>'><?php echo $x; ?></a>
 <?php endfor; ?>
 <table border="1px">
