@@ -31,11 +31,21 @@ if(isset($_POST['search'])){
         $json = file_get_contents('http://rdapi.herokuapp.com/product/search.php?s='.$search);
         $data = json_decode($json,true);
         $list = $data['records'];
+	    $limit = 10; // five rows per page
+$offset = ($page - 1) * $limit; // offset
+$total_items = count($list); // total items
+$total_pages = ceil($total_items / $limit);
+$final = array_splice($list, $offset, $limit); // splice them according to offset and limit
     }else{
         $json = file_get_contents('http://rdapi.herokuapp.com/product/read.php');
         $data = json_decode($json,true);
         //rsort($data);
         $list = $data['records'];
+	    $limit = 10; // five rows per page
+$offset = ($page - 1) * $limit; // offset
+$total_items = count($list); // total items
+$total_pages = ceil($total_items / $limit);
+$final = array_splice($list, $offset, $limit); // splice them according to offset and limit
     }
 ?>
 <div class="empty-small"></div>
