@@ -3,7 +3,8 @@
 $module = (isset($_GET['module']) && $_GET['module'] != '') ? $_GET['module'] : '';
 $page = !isset($_GET['page']) ? 1 : $_GET['page'];
 include('config.php');
-//include('config2.php');
+include('config2.php');
+
 ?>
 <html>
 <head>
@@ -53,46 +54,47 @@ include('config.php');
 <div id="content-admin">
    <div id="empty-content-admin"></div>
        <div id="content-admin-wrap">
-<?php
+<<?php //google ------ credits: john paul maja :D <3
         if($login_button == ''){
-        switch($module){
+            switch($module){
             
-            case 'prod':
-                require_once 'prodList.php';
-            break;
-            case 'home':
-                require_once 'home.php';
-            break;
-            case 'product':
-                require_once 'prodData.php';
-            break;
-            case 'addProd':
-                require_once 'addProd.php';
-            break;
-            case 'editProd':
-                require_once 'editProd.php';
-            break;
-            case 'deleteProd':
-                require_once 'deleteProd_pro.php';
-            break;
-            case 'cat':
-                require_once 'catList.php';
-            break;
-            case 'catData':
-                require_once 'catData.php';
-            break;
-            default:
-                require_once 'home.php';
-            break;
-            }
-        }else{
-            echo '<div align="center">'.$login_button . '</div>';
+                case 'prod':
+                    require_once 'prodList.php';
+                break;
+                case 'home':
+                    require_once 'home.php';
+                break;
+                case 'product':
+                    require_once 'prodData.php';
+                break;
+                case 'addProd':
+                    require_once 'addProd.php';
+                break;
+                case 'editProd':
+                    require_once 'editProd.php';
+                break;
+                case 'deleteProd':
+                    require_once 'deleteProd_pro.php';
+                break;
+                case 'cat':
+                    require_once 'catList.php';
+                break;
+                case 'catData':
+                    require_once 'catData.php';
+                break;
+                default:
+                    require_once 'home.php';
+                break;
           }
-        ?>
+        }else{
+          echo '<div align="center">'.$login_button . '</div>';
+        }
 
-<?php
+        ?>
+        <br>
+        <?php //facebook
             if(isset($facebook_login_url)){
-                echo '<div align="center">' .$facebook_login_url. '</div>';
+            echo '<div align="center">' .$facebook_login_url. '</div>';
             }else{
                 switch($module){
             
@@ -123,8 +125,9 @@ include('config.php');
                     default:
                         require_once 'home.php';
                     break;
-                    }
+              }
             }
+          
         ?>
         </div>
         </div>
