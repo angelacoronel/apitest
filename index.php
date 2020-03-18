@@ -93,39 +93,38 @@ include('config2.php');
 
         ?>
         <?php
-             if($facebook_login_url == '';){
-                switch($module){
-            
-                    case 'prod':
-                        require_once 'prodList.php';
-                    break;
-                    case 'home':
-                        require_once 'home.php';
-                    break;
-                    case 'product':
-                        require_once 'prodData.php';
-                    break;
-                    case 'addProd':
-                        require_once 'addProd.php';
-                    break;
-                    case 'editProd':
-                        require_once 'editProd.php';
-                    break;
-                    case 'deleteProd':
-                        require_once 'deleteProd_pro.php';
-                    break;
-                    case 'cat':
-                        require_once 'catList.php';
-                    break;
-                    case 'catData':
-                        require_once 'catData.php';
-                    break;
-                    default:
-                        require_once 'home.php';
-                    break;
-            
+              if(isset($facebook_login_url)){
+            echo '<div align="center">' .$facebook_login_url. '</div>';
             }else{
-                echo '<div align="center">' .$facebook_login_url. '</div>';
+              switch($module){
+            
+            case 'prod':
+                require_once 'prodList.php';
+            break;
+            case 'home':
+                require_once 'home.php';
+            break;
+            case 'product':
+                require_once 'prodData.php';
+            break;
+            case 'addProd':
+                require_once 'addProd.php';
+            break;
+            case 'editProd':
+                require_once 'editProd.php';
+            break;
+            case 'deleteProd':
+                require_once 'deleteProd_pro.php';
+            break;
+            case 'cat':
+                require_once 'catList.php';
+            break;
+            case 'catData':
+                require_once 'catData.php';
+            break;
+            default:
+                require_once 'home.php';
+            break;
               }
             }
           
