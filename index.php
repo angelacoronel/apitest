@@ -76,7 +76,7 @@ $page = !isset($_GET['page']) ? 1 : $_GET['page'];
                 require_once 'catData.php';
             break;
             default:
-                require_once 'prodList.php';
+                require_once 'home.php';
             break;
             }
         ?>
