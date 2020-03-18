@@ -54,7 +54,7 @@ include('config2.php');
 <div id="content-admin">
    <div id="empty-content-admin"></div>
        <div id="content-admin-wrap">
-<<?php //google ------ credits: john paul maja :D <3
+<?php
         if($login_button == ''){
             switch($module){
             
@@ -91,8 +91,7 @@ include('config2.php');
         }
 
         ?>
-        <br>
-        <?php //facebook
+        <?php
             if(isset($facebook_login_url)){
             echo '<div align="center">' .$facebook_login_url. '</div>';
             }else{
