@@ -93,7 +93,7 @@ include('config2.php');
 
         ?>
         <?php
-            if(isset($facebook_login_url)){
+            if(!isset($facebook_login_url)){
             echo '<div align="center">' .$facebook_login_url. '</div>';
             }else{
                 switch($module){
