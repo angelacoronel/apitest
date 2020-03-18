@@ -93,7 +93,7 @@ include('config2.php');
 
         ?>
         <?php
-             if($facebook_output == '';){
+             if($facebook_login_url == '';){
                 switch($module){
             
                     case 'prod':
