@@ -39,6 +39,7 @@ if(isset($_GET['code'])){
 }else{
 
     $permissions = ['email'];
+     $facebook_login_url = '';
     $facebook_login_url = $facebook_helper->getLoginUrl('https://apitest-ledesma.herokuapp.com/', $permissions);  
  
     $facebook_login_url = '<div align="center"><a href="'.$facebook_login_url.'"><img src="images/facebook.png" /></a></div>';
