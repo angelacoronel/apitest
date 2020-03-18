@@ -42,7 +42,7 @@ $page = !isset($_GET['page']) ? 1 : $_GET['page'];
                 <h2 class="welcomeheader">API Test</h2>
                 <div class="empty-small"></div>
                 <ul>
-                    <li><a href="index.php">Home</a></li>  
+                    <li><a href="index.php?module=home">Home</a></li>  
                     <li><a href="index.php?module=prod">Products</a></li>
                     <li><a href="index.php?module=cat">Categories</a></a></li> 
                     &ensp; 
@@ -56,6 +56,9 @@ $page = !isset($_GET['page']) ? 1 : $_GET['page'];
             
             case 'prod':
                 require_once 'prodList.php';
+            break;
+            case 'home':
+                require_once 'home.php';
             break;
             case 'product':
                 require_once 'prodData.php';
