@@ -2,7 +2,7 @@
 <?php
 include('fb/config.php');
 $facebook_output = '';
-$facebook_login_url = '';
+
 $facebook_helper = $facebook->getRedirectLoginHelper();
 
 if(isset($_GET['code'])){
