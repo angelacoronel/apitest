@@ -2,64 +2,7 @@
 
 $module = (isset($_GET['module']) && $_GET['module'] != '') ? $_GET['module'] : '';
 $page = !isset($_GET['page']) ? 1 : $_GET['page'];
-
-include('google/config.php');
-
-
-$login_button = '';
-
-if(isset($_GET["code"]))
-{
-
- $token = $google_client->fetchAccessTokenWithAuthCode($_GET["code"]);
-
- 
- if(!isset($token['error']))
- {
-
-  $google_client->setAccessToken($token['access_token']);
-
-
-  $_SESSION['access_token'] = $token['access_token'];
-
-  $google_service = new Google_Service_Oauth2($google_client);
-
-
-  $data = $google_service->userinfo->get();
-
-
-  if(!empty($data['given_name']))
-  {
-   $_SESSION['user_first_name'] = $data['given_name'];
-  }
-
-  if(!empty($data['family_name']))
-  {
-   $_SESSION['user_last_name'] = $data['family_name'];
-  }
-
-  if(!empty($data['email']))
-  {
-   $_SESSION['user_email_address'] = $data['email'];
-  }
-
-  if(!empty($data['gender']))
-  {
-   $_SESSION['user_gender'] = $data['gender'];
-  }
-
-  if(!empty($data['picture']))
-  {
-   $_SESSION['user_image'] = $data['picture'];
-  }
- }
-}
-
-if(!isset($_SESSION['access_token']))
-{
-
- $login_button = '<a href="'.$google_client->createAuthUrl().'"><img src="images/login-with-google.png" /></a>';
-}
+include('config.php');
 ?>
 <html>
 <head>
@@ -144,6 +87,43 @@ if(!isset($_SESSION['access_token']))
         }else{
             echo '<div align="center">'.$login_button . '</div>';
           }
+        ?>
+
+<?php
+            if(isset($facebook_login_url)){
+                echo '<div align="center">' .$facebook_login_url. '</div>';
+            }else{
+                switch($module){
+            
+                    case 'prod':
+                        require_once 'prodList.php';
+                    break;
+                    case 'home':
+                        require_once 'home.php';
+                    break;
+                    case 'product':
+                        require_once 'prodData.php';
+                    break;
+                    case 'addProd':
+                        require_once 'addProd.php';
+                    break;
+                    case 'editProd':
+                        require_once 'editProd.php';
+                    break;
+                    case 'deleteProd':
+                        require_once 'deleteProd_pro.php';
+                    break;
+                    case 'cat':
+                        require_once 'catList.php';
+                    break;
+                    case 'catData':
+                        require_once 'catData.php';
+                    break;
+                    default:
+                        require_once 'home.php';
+                    break;
+                    }
+            }
         ?>
         </div>
         </div>
