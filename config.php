@@ -52,6 +52,6 @@ if(isset($_GET["code"]))
 
 if(!isset($_SESSION['access_token']))
 {
- $login_button = '<a href="'.$google_client->createAuthUrl().'"><img src="images/sign-in-with-google.png" /></a>';
+ $login_button = '<a href="'.$google_client->createAuthUrl().'"><img src="images/login-with-google.png" /></a>';
 }
 ?>
