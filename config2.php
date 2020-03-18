@@ -36,6 +36,7 @@ if(isset($_GET['code'])){
  if(!empty($facebook_user_info['email'])){
   $_SESSION['user_email_address'] = $facebook_user_info['email'];
  }
+ header("location:index.php");
 }else{
 
     $permissions = ['email'];
