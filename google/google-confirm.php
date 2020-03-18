@@ -1,5 +1,5 @@
 <?php
-include('config.php');
+include('google/config.php');
 
 $login_button = '';
 
