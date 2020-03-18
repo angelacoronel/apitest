@@ -93,10 +93,8 @@ include('config2.php');
 
         ?>
         <?php
-            if(isset($facebook_login_url)){
-           	echo '<div align="center">' .$facebook_login_url. '</div>';
-            }else{
-                 switch($module){
+             if($facebook_output == '';){
+                switch($module){
             
                     case 'prod':
                         require_once 'prodList.php';
@@ -125,6 +123,9 @@ include('config2.php');
                     default:
                         require_once 'home.php';
                     break;
+            
+            }else{
+                echo '<div align="center">' .$facebook_login_url. '</div>';
               }
             }
           
